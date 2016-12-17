@@ -1,0 +1,19 @@
+/*Classi Aggiuntive per le pagine Faq, Contatti e Notelegali
+*Sovrascrivono alcune, senza modificare il css precendente
+*/
+
+.wrapper.faq ul li h3>a span.number, .wrapper.faq ul li h3>a span.frequenza {
+    color: #FFFFFF;
+    background-color: #87c3d4;
+  }
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Montserrat, Arial, sans-serif;
+  }
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+.centerconc {
+  width:85%;
+  margin: 0 auto;
+}

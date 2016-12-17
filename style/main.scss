@@ -1,0 +1,23 @@
+
+/* ==================== 
+
+richiamo delle definizioni con unico file 
+seguendo ITCSS delle priorità 
+
+======================= */
+
+
+
+@import "_settings";
+@import "_settings.fontello";
+@import "_tools";
+
+@import "_generic.normalize";
+@import "_generic.reset";
+
+@import "_objects";
+@import "_elements";
+
+@import "_components";
+@import "_components.mediaquery.scss";
+@import "_trumps";

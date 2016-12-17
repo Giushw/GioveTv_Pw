@@ -1,0 +1,229 @@
+@media only screen 
+and (max-width: 1214px){
+	.o-wrapper__guide, .o-wrapper__type {
+		width: 80%;
+		margin: 20px 10% 10px;
+		float: left;
+	}
+}
+
+@media only screen 
+and (max-width: 992px){
+	.o-wrapper__type__item{
+		width: 45%;
+		margin: 2.5%;
+		&:nth-child(3), &:nth-child(6){
+			margin: 2.5%;
+		} 
+	}
+	.o-blockBar__Nav__link {
+		padding: 0 $stndPadding/1.5; 
+	}
+}
+
+@media only screen 
+and (max-width: 768px){
+
+	.o-block{
+		display: none;
+	}
+
+	.logoG {
+		overflow: hidden;
+		width: $logo--nav/1.2;
+		height: $logo--nav/1.2;
+		position: fixed;
+		z-index: 1000;
+	}
+
+	.o-blockBar__boxFtr__link, .o-blockBar__Nav__link {
+		visibility: hidden;
+	}
+	.o-blockBar__boxFtr:nth-child(1){
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		padding-top: 3.2%;
+		font-size: 60%;
+		z-index: 900;
+	} 
+	.o-blockBar__Nav__mobileNav{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		padding-top: $logo--nav;
+		z-index:998;
+		text-align: center;
+		top:0;
+		left: 0;
+		background-color: $color_text-soft ;
+		&__link{
+			visibility: visible;
+			width: 100%;
+			color: $color_text-base;
+			padding: $stndPadding/3, $stndPadding;
+			&:hover{
+				color: $color_text-base;
+			}
+		}
+
+	}
+	.borderSelect{
+		display: block;
+		border-bottom: 2px solid #fff;
+	}
+	
+
+	.o-wrapper__suggest, .o-wrapper__guide, .o-wrapper__type,{
+		width: 100%;
+		margin:0;
+		border-bottom: 0;
+		padding: 40px 0 0;
+	}
+	.o-wrapper__type__text{
+		text-align: center;
+		border-bottom: 0;
+		background-color: $color_brand--second;
+		color: $color_text-base;
+		padding-top:($stndPadding/4); 
+	}
+
+	.o-blockBar, .o-wrapper, .o-blockBar__boxFtr{
+		width: 100%;
+		position: relative;
+		margin: 0;
+	}
+	.o-wrapper__suggest__txt{
+		font-size: $sizeText-main/1.5;
+	}
+
+	.o-blockBar__Nav{
+		width: 100%;
+		background-color:transparent;
+		position: fixed;
+	}
+
+	.o-wrapper__type__item{
+		width:100%;
+		min-height: $stndPadding;
+		margin: 0;
+		position:static;
+		background-image:none;
+		&:nth-child(3), &:nth-child(6){
+			margin: 0;
+		}
+		&:after{
+			display:none;
+		}
+		&__link{
+			position: static;
+			line-height: $stndPadding*2;
+		}
+	}
+
+	#cinema {
+		background-image: none;
+		background-color: $color_brand--main;
+		color: $color_text-base; 
+	}
+
+	#serie {
+		background-image: none;
+		background-color: $color_text-dark;
+		color: $color_text-light;
+	}
+
+	#cucina {
+		background-image: none;
+		background-color: $color_brand--second;
+		color: $color_text-soft; 	
+	}
+
+	#talent {
+		background-image: none;
+		background-color: $color_text-soft;
+		color: $color_brand--second;
+	}
+
+	#bimbi {
+		background-image: none;
+		background-color: $color_text-light;
+		color: $color_text-dark;
+	}
+
+	#sport {
+		background-image: none;
+		background-color: $color_text-base;
+		color: $color_brand--main;
+	}
+
+	/* Modifica Gualberto */
+	.program_Box_1{
+		@include program_Box_sizing;
+		margin: 10% 0 1.5% 0;
+		background-color: $color_brand--main;
+	}
+
+	.program_Box_2{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_text-dark;
+	}
+	
+	.program_Box_3{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_brand--second;
+	}	
+	
+
+	.program_Box_4{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_text-soft;
+	}	
+	
+
+	.program_Box_5{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_text-light;
+	}	
+	
+
+	.program_Box_6{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_brand-grey;
+	}	
+	
+
+	.program_Box_7{
+		@include program_Box_sizing;
+		margin: 1% 0 1% 0;
+		background-color: $color_text-base;
+	}
+	
+	/*OK dimensione fat footer*/
+	.o-wrapper-fatFooter {
+		width: 100%;
+		margin: 0 2% 0 1%;
+	}
+
+	.o-wrapper-fatFooter__item__title {
+		font-size: 2em;
+	}
+	
+	.o-wrapper-fatFooter__item.testo_Massimo {
+		width: 100%;
+		display: inline-block;
+	}
+
+
+	.o-wrapper-fatFooter__item__title, .o-wrapper-fatFooter__item ul li{
+		text-align: center;
+		font-size: 1.8em;
+
+	}
+
+}

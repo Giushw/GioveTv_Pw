@@ -1,0 +1,560 @@
+
+
+.logoLoad{
+	position: absolute;
+	width: $logo--nav;
+	height: $logo--nav;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 40%;
+	animation: loadCircle 1s infinite;
+	border-radius: 100%;
+}
+
+#mapView:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+
+// ========= NAV =========
+
+.o-blockBar__Nav__link {
+		@include btnNav($stndPadding, $color_text-base, $formatHeight);
+	&:hover{
+		background-color: $color_brand--main;
+	}
+}
+
+
+// =========== SUGGERIMENTI ===========
+
+.o-wrapper__suggest {
+	padding-bottom:($formatHeight/2);
+	text-align: center;
+	&__txt{
+		@include title($sizeText-main, $color_brand--main);
+		padding-bottom: $stndPadding/2;
+		text-align: center;
+	}
+}
+
+
+// ========= SLIDER ============
+
+
+.o-wrapper__owl-carousel__owl-theme{
+    display: block;
+   	width: 100%;
+
+}
+
+
+.o-wrapper__type{
+	@extend .o-wrapper__divBig;
+	border-bottom: 0.125em solid $color_brand--main;
+	&__text{
+		border-bottom: 0.1em solid $color_brand--main;
+		padding-bottom: ($stndPadding/4);
+		margin-bottom: 2.5%;
+	}
+	&__item{
+		width: $width_parzialSmall;
+		min-width: 180px;
+		float: left;
+		margin: 0 0 1.7%;
+		background-position: 0px 0px;
+		background-size: cover;
+		position: relative;
+		transition: all 0.3s;
+		&:hover{
+			transform: scale(1.1);
+		}
+		&:nth-child(3), &:nth-child(6){
+			margin-right: 5%;
+			margin-left: 5%;
+		}
+		&__link{
+			color: $color_text-choc;
+			text-align: center;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			padding: 0;
+			line-height: $formatHeight*2;
+			font-size: $stndPadding;
+		}
+	}
+	&__item:after{
+		content: "";
+		display: block;
+		padding-bottom: ($width_main+9%);
+	}
+}
+
+// ========= SEARCH =========
+
+.o-wrapper__suggest__search{
+	position:relative;
+	display: inline-block;
+	width: 40%;
+}
+
+.tableResult{
+	display:none;
+	width: 100%;
+	left: 0;
+	background-color: #fff;
+	color: $color_brand--main;
+	border-left: 1.5px solid $color_brand--second;
+	border-right: 1.5px solid $color_brand--second;
+	border-bottom: 1.5px solid $color_brand--second;
+	text-align: left;
+	font-size: 13px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: absolute;
+}
+
+.suggest__search-input{
+	border: 0;
+	width: 100%;
+	border-bottom: 2px solid $color_brand--main;
+	color: $color_brand--main;
+	background-color: transparent;
+	display: block;
+	padding: $stndPadding/4;
+	&:focus{
+		border:0;
+		outline: none;
+		border-bottom: 2px solid $color_brand--second;
+	}
+}
+
+
+.btnSrc{
+	padding: $stndPadding/3 $stndPadding/2;
+	border:0;
+	display: inline-block;
+	margin: 0;
+	background-color: transparent;
+	color: $color_brand--main;
+	border-radius: 2%;
+	&:hover{
+		background-color: $color_brand--second;
+		color: $color_text-base;
+	}
+}
+
+
+// ========= GUIDA TV =========
+
+
+.o-wrapper__guide__daySlider{
+	background-color: $color_text-soft;
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	padding: ($stndPadding) 0;
+	position: relative;
+	color: $color_text-base;
+}
+
+%btnDaySlider {
+	position: absolute;
+	color: $color_text-base;
+	cursor:pointer;
+	font-size: 200%;
+    width: 10%;
+    height: auto;
+    top: 30%;
+    margin: 0 3%;
+}
+.btnDaySlider-right{
+	@extend %btnDaySlider;
+	right: 1%;
+}
+.btnDaySlider-left{
+	@extend %btnDaySlider;
+	left: 1%;
+}
+
+
+.btnLoadMore {
+	@extend .btnStnd;
+	width: 16%;
+	background-color: $color_text-soft;
+	color: $color_text-base;
+	margin: 0 auto $stndPadding/2;
+	&:hover{
+		background-color: $color_brand--main;
+		color: $color_text-base;
+		cursor: pointer;
+	}
+}
+
+.lecture {
+	overflow: hidden;
+}
+
+
+.o-wrapper__guide{
+	@extend .o-wrapper__divSmall;
+	border-bottom: 0.125em solid $color_brand--main;
+}
+
+.guide__item{
+	width: 100%;
+	overflow:hidden;
+	float:left;
+	min-height: $formatHeight;
+	padding-bottom: ($stndPadding/4);
+	&:hover {
+		background-color: $color_brand--main;
+		color: $color_text-base;
+		font-weight: lighter;
+	}
+	&:nth-child(3){
+		border-top: 0;
+	}
+
+	&__hour{
+		width: ($width_parzialSmall+1.25%);
+		float: left;
+		text-align: center;
+		padding-top: ($stndPadding/3);
+		height: 100%;
+		&__txt{
+			padding: ($stndPadding/3);
+			font-size: 1.563em;
+			line-height: $formatHeight;
+		}
+	}
+	&__title{
+		width: $width_parzialBig;
+		float:left;
+		padding: ($stndPadding/3);
+		padding-bottom:0;
+		&__header{
+			padding-bottom: $stndPadding/4;
+			font-weight: 600;
+		}
+	}
+}
+
+.small__guide--text{
+	font-size: $sizeText-main/3.5;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.o-wrapper__guide__showContainer{
+	width: 80%;
+	background-color: grey;
+	margin: 0 auto;
+	color: $color_brand--main;
+}
+
+
+.guide__item__title__text{
+	padding: $stndPadding/3 0 $stndPadding/3;
+	font-size: $sizeText-main/2;
+	display: block;
+	&:hover{
+		color: $color_text-base;
+	}
+}
+
+.styleGuide-hour{
+	background-color: $color_text-soft;
+	color: $color_text-base;
+}
+
+.styleGuide-program {
+	border: 2px solid $color_brand--main;
+	margin: $stndPadding/2 0;
+	padding-bottom: 0;
+	&:nth-child(3){
+		border-top: 2px solid $color_brand--main;
+	}
+}
+
+// ========= SCHEDA PRODOTTO =========
+
+
+.showContainer{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.o-wrapper__overview{
+	clear: both;
+	margin: $stndPadding/2 0;
+	width: $width_parzialBig;
+	text-align: justify;
+    text-justify: inter-word;
+	&__txt{
+		font-weight: 200;
+		padding: $stndPadding/2 0;
+	}
+}
+
+.product__title{
+	@include title($sizeText-main, $color_brand--main);
+	text-align: center;
+}
+
+.product__info{
+	text-align: center;
+	font-size: $sizeText-main/1.2;
+	padding: $stndPadding/2 0;
+}
+
+.o-wrapper__product{
+	@extend .o-wrapper__divSmall;
+	background-color: $color_text-soft;
+	color: $color_text-base;
+	padding-top: $stndPadding/1.5;
+}
+
+.overview__info{
+	color: $color_text-soft;
+}
+
+
+// ========= COMMENTI =========
+
+.o-wrapper__overview-comment{
+	@extend .o-wrapper__overview;
+	border: 2px solid $color_text-soft;
+	overflow: hidden;
+}
+
+
+.comment{
+	width: 100%;
+	float: left;
+	border-bottom: 2px solid $color_text-soft;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: $color_brand--main;
+	padding: $stndPadding/3;
+
+	&__user{
+		width: $width_parzialSmall/2.5;
+		text-align: center;
+	}
+	&__text{
+		width:$width_parzialBig*1.4;
+	}
+	&:last-child{
+		border-bottom: 0;
+	}
+}
+
+
+
+// ========= FORM =========
+
+.o-wrapper__form{
+	width: 50%;
+	background-color: $color_text-soft;
+	margin: 0 auto $stndPadding;
+	padding: $formatHeight 0 $formatHeight/2;
+	text-align: center;
+	color: $color_text-base;
+}
+
+.form__title{
+	@extend .o-wrapper__suggest__txt;
+	color: $color_text-base;
+}
+
+.o-wrapper__form-accedi{
+	@extend .o-wrapper__form;
+	background-color: #DDA3B2;
+}
+
+.o-wrapper__form-registra{
+	@extend .o-wrapper__form;
+	background-color: #DEF4C6;
+}
+
+
+.o-wrapper__form-input{
+	border: 0;
+	margin: $stndPadding/2 $stndPadding $stndPadding $stndPadding;
+	width: 60%;
+	border-bottom: 2px solid $color_text-base;
+	color: $color_text-base;
+	background-color: transparent;
+	&:focus{
+		border:0;
+		outline: none;
+		border-bottom: 2px solid $color_brand--main;
+	}
+}
+
+.o-wrapper__form__btnConfirm{
+	@extend .btnStnd;
+	background-color: $color_brand--main;
+	color: $color_text-base;
+	&:hover{
+		background-color: $color_text-base ;
+		color:$color_brand--main;
+	}
+}
+
+.o-wrapper__form-cBox{
+	@include gridBox($color_text-base, 46%);
+	text-align: left;
+}
+
+.hidden__form-registra{
+	display:none;
+}
+.hidden__form-accedi{
+	display:none;
+}
+
+
+// ========= FAT FOOTER =========
+
+.o-wrapper-fatFooter{
+	width: $width_main;
+    margin-right: $margin_main;
+    margin-left: $margin_main;
+    overflow: hidden;
+	background-color: $color_text-soft;
+	color: $color_text-base;
+	&__item{
+		@include gridBox;
+		//background-color: $colortest-dark;
+		padding-left: 1%;
+		margin-bottom:$stndPadding;
+		&__title{
+			font-size: 1.45em;
+			padding: ($stndPadding/3) 0;
+			color: $color_brand--second;
+		}
+	}
+	&__title{
+		@include title($sizeText-main/1.5, $color_text-base, $stndPadding/2, $stndPadding/2 );
+
+	}
+}
+
+
+// ========= FOOTER COMPONENET =========
+
+.o-blockBar__boxFtr{
+	@include gridBox($color_text-soft);
+
+	&__link{
+		display: block;
+		text-align: right;
+		color: $color_text-soft;
+		padding-bottom: ($stndPadding/5);
+		&:hover{
+			color: $color_brand--main;
+			text-decoration: underline;
+		}
+	}
+	&__social{
+		text-align: center;
+		&__link{
+			display: inline-block;
+			padding-top: ($stndPadding/3);
+			color: $color_text-soft;
+			&:hover{
+				color: $color_brand--main;
+			}
+		}
+	}
+}
+
+
+
+#cinema {
+	background-image: url(../images/cinema_s.png);
+	background-repeat: no-repeat;
+}
+
+#serie {
+	background-image: url(../images/serieTV_s.png);
+	background-repeat: no-repeat;
+}
+
+#cucina {
+	background-image: url(../images/cucina_s.png);
+	background-repeat: no-repeat;
+}
+
+#talent {
+	background-image: url(../images/talent_s.png);
+	background-repeat: no-repeat;
+}
+
+#bimbi {
+	background-image: url(../images/barba_s.png);
+	background-repeat: no-repeat;
+}
+
+#sport {
+	background-image: url(../images/sport_s.png);
+	background-repeat: no-repeat;
+}
+
+.program_Box_1 {
+	@include program_Box_Main;
+	background-image: url(/images/cinema1.jpg);
+	margin: 0 1.5% 1% 0.5%;
+}
+
+.program_Box_2 {
+	@include program_Box_Main;
+	margin: 0 0 1% 1.5%;
+	background-image: url(/images/Talent1.jpg);
+}
+
+.program_Box_3 {
+	@include program_Box_Main_2;
+	margin: 1% 1.5% 1% 0.5%;
+	background-image: url(/images/Sport1.jpg);
+}
+
+.program_Box_4 {
+	@include program_Box_Main_2;
+	margin: 1% 1.5% 1% 1.5%;
+	background-image: url(/images/SerieTv1.jpg);
+}
+
+.program_Box_5 {
+	@include program_Box_Main_2;
+	margin: 1% 0% 1% 1.5%;
+	background-image: url(/images/musica1.jpg);
+}
+
+.program_Box_6 {
+	@include program_Box_Main;
+	margin: 1% 1% 2% 0.5%;
+	background-image: url(/images/Cucina1.jpg);
+}
+
+.program_Box_7 {
+	@include program_Box_Main;
+	margin: 1% 0 2% 2%;
+	background-image: url(/images/Cartoni1.jpg);
+}
+
+section .title_Box {
+	color: #21d0ff;
+	line-height: 160px;
+	font-size: 2em;
+	text-align: center;
+}

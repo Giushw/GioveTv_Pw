@@ -1,0 +1,86 @@
+/* =======================
+
+ definizione dei class base selector 
+ derivati dall'OOCSS (object oriented css)
+ wrappers, layout
+
+=========================== */
+
+body {
+	font-family: $font_brand-main;
+	height: 100%;
+}
+
+.o-wrapper {
+    width: $width_main;
+    margin-right: $margin_main;
+    margin-left: $margin_main;
+    padding-top: $formatHeight+ ($formatHeight/2);
+    overflow: hidden;
+    height: 100%;
+    padding-left:$stndPadding/3;
+    padding-right:$stndPadding/3;
+    background-image: url("/images/geometry.png");
+}
+
+.o-blockBar {
+	width: $width_main;
+	background-color: $color_brand--second;	
+	z-index: $stZIndex;
+	float: left;
+
+	&__Nav {
+	height: $formatHeight;
+	position: fixed;
+	display: inline-block;
+	}	
+}
+
+.o-block {
+	width: $margin_main;
+	height: $formatHeight;
+	float: left;
+	z-index: $stZIndex;
+}
+
+.o-popUp {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(250,250,250,1);
+	&__inside{
+		display:none;
+		position:absolute;
+		z-index:1001;
+		top: 12%;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		width: 50%;
+		height: 60%;
+		&-content{
+			height:90%;
+			width: 100%;
+			background-color: #fff;
+			display: none;
+		}
+		&-close{
+			height:10%;
+			width: 100%;
+			text-align: right;
+			font-size: $sizeText-main/1.5;
+			color: $color_text-choc;
+			cursor: pointer;
+		}
+	}
+
+}
+
+.close {
+	position: absolute;
+	top: -10%;
+	right: 0;
+	font-size: 180%;
+	color: $color_text-choc;
+}

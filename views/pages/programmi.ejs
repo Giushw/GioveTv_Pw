@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include partials/head %>
+		<title>Programmi | Giove TV</title>
+	</head>
+
+	<body>
+		<% include partials/popUp %>
+
+		<!-- HEADER | con barra di NAVigazione-->
+		<% include partials/header %>
+
+
+		<!-- MAIN Content -->
+
+		<section class="o-wrapper">
+
+			<!-- BARRA DI RICERCA -->
+			<section class="o-wrapper__suggest">
+				<h2 class="o-wrapper__suggest__txt"> CERCA IL TUO PROGRAMMA PREFERITO </h2>
+				<form>
+					<div class="o-wrapper__suggest__search" >
+						<input id="search" class="suggest__search-input" type="text" placeholder=" Pulp Fiction">
+						<div class="tableResult"> </div>
+					</div>
+
+					<input id="btnSearch" class="btnSrc" type="submit" value="Cerca">
+					
+				</form>
+			</section>
+
+			<!-- DIVISIONE GENERI -->
+			<section id="type">
+				<section class="program_Box_1" id="cinema_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">CINEMA</h2></a>
+				</section>
+
+				<section class="program_Box_2" id="talent_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">TALENT</h2></a>				
+				</section>
+
+				<section class="program_Box_3" id="sport_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">SPORT</h2></a>	
+				</section>
+
+				<section class="program_Box_4" id="serie_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">SERIE TV</h2></a>
+				</section>
+
+				<section class="program_Box_5" id="musica_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">MUSICA</h2></a>
+				</section>
+
+				<section class="program_Box_6" id="cucina_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">CUCINA</h2></a>
+				</section>
+
+				<section class="program_Box_7" id="bimbi_p">
+					<a href="/schedaProgrammi"><h2 class="title_Box">CARTONI</h2></a>
+				</section>	
+			</section>
+			
+
+		</section> <!-- e : o-wrapper -->
+
+
+		<!-- FAT FOOTER | elenco dei programmi della settimana in ordine alfabetico -->
+
+		<section class="o-wrapper-fatFooter">
+			<h2 class="o-wrapper-fatFooter__title">Programmi della settimana A-Z</h2>
+				<section class="o-wrapper-fatFooter__item testo_Massimo">
+					
+					<h3 class="o-wrapper-fatFooter__item__title">A-C</h3>
+					<ul>
+						<li>Ally McBeal</li>
+						<li>Amici</li>
+						<li>Ballando sotto le stelle</li>
+					</ul>
+					
+
+					<h3 class="o-wrapper-fatFooter__item__title">D-F</h3>
+					<ul>
+						<li>Dodgeball</li>
+						<li>Era mio padre</li>
+						<li>Fabbrica di Cioccolato</li>
+					</ul>
+
+				</section>
+					
+				<section class="o-wrapper-fatFooter__item testo_Massimo">
+					<h3 class="o-wrapper-fatFooter__item__title">G-L</h3>
+					<ul>
+						<li>Grey's Anatomy</li>
+						<li >Lost in Traslation</li>
+					</ul>
+					
+					<h3 class="o-wrapper-fatFooter__item__title">M-P</h3>
+					<ul>
+						<li>Masterchef Italia</li>
+						<li><a href="/pageLeaf">Pulp Fiction</a></li>
+					</ul>	
+				</section >
+					
+				<section class="o-wrapper-fatFooter__item testo_Massimo">
+					<h3 class="o-wrapper-fatFooter__item__title">S-T</h3>
+					<ul>
+						<li>Somewhere</li>
+						<li>Revenge</li>
+						<li>The Good Wife</li>
+					</ul>
+					
+					<h3 class="o-wrapper-fatFooter__item__title">U-Z</h3>
+					<ul>
+						<li>V per Vendetta</li>
+						<li>Zohan</li>
+					</ul>	
+				</section>
+		</section>
+		
+		<!-- FOOTER | con lista collegamenti -->
+		<% include partials/footer %>
+
+		<% include partials/script %>
+
+	</body>
+</html>

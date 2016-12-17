@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<% include partials/head %>
+		<title>Home | Giove TV</title>
+
+	</head>
+
+	<body>
+		<% include partials/popUp %>
+		<!-- HEADER | con barra di NAVigazione-->
+		<% include partials/header %>
+
+		<section class="o-wrapper">
+
+			<!-- SUGGERIMENTI dei contenuti -->
+			<section class="o-wrapper__suggest">
+				<h2 class="o-wrapper__suggest__txt">NON PERDERTI IL FILM CULT DELLA SETTIMANA</h2>
+				
+				<!-- Ho aggiunto le immagini della slider -->
+				<div id="slider" class="owl-carousel__owl-theme">
+					  <div class="item"><a href="/program/tt0110912"><img src="/images/slider01.jpg" alt="XXX"></a></div>
+					  <div class="item"><a href="/program/tt1421051"><img src="/images/slider02.jpg" alt="XXX"></a></div>
+					  <div class="item"><a href="/program/tt0208092"><img src="/images/slider03.jpg" alt="XXX"></a></div>
+					  <div class="item"><a href="/program/tt0362270"><img src="/images/slider04.jpg" alt="XXX"></a></div>
+				</div>
+
+				<section class="o-wrapper__suggest__slider"></section> 
+			</section> 
+
+
+			<!-- Guida TV breve -->
+			<% include partials/guidaSmall%>	
+			<div class="clear"></div>
+
+
+			<!-- Generi principali -->
+			<section class="o-wrapper__type">
+				<h2 class="o-wrapper__type__text"> I GENERI PIU' VISTI</h2>
+				
+				<section class="o-wrapper__type__item" id="cinema">
+					<a href="" class="o-wrapper__type__item__link"><h3>CINEMA</h3></a>
+				</section>
+				<section class="o-wrapper__type__item" id="serie">
+					<a href="" class="o-wrapper__type__item__link"><h3>SERIE TV</h3></a>	
+				</section>
+				<section class="o-wrapper__type__item" id="cucina">
+					<a href="" class="o-wrapper__type__item__link"><h3>CUCINA</h3></a>	
+				</section>
+				<section class="o-wrapper__type__item" id="talent">	
+					<a href="" class="o-wrapper__type__item__link"><h3>TALENT</h3></a>
+				</section>
+				<section class="o-wrapper__type__item" id="bimbi">
+					<a href="" class="o-wrapper__type__item__link"><h3>BAMBINI</h3></a>	
+				</section>
+				<section class="o-wrapper__type__item" id="sport">
+					<a href="" class="o-wrapper__type__item__link"><h3>SPORT</h3></a>	
+				</section>		
+			</section>
+
+			<div class="clear1"></div>
+
+		</section> <!-- e: o-wrapper -->
+
+		<!-- FOOTER | con lista collegamenti -->
+		<% include partials/footer %>
+
+		<% include partials/script %>
+
+	</body>
+</html>

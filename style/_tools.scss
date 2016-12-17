@@ -1,0 +1,110 @@
+/* ======================= 
+
+ Definizione dei mixins
+
+========================== */
+
+@mixin btnNav($padding, $colorTxt, $height) {
+	display: inline-block;
+	float: left;
+	padding: 0 $padding; 
+	color: $colorTxt; 
+	line-height: $height; 
+}
+
+@mixin gridBox($colorText:$color_text-base, $wGrid: $width_parzialSmall){
+	color: $colorText;
+	float: left;
+	width: ($wGrid + 1.3%);
+	min-height: $formatHeight;
+	margin: 1%;
+	padding-top: ($stndPadding/5);
+}
+
+
+@mixin title($fontSize:$sizeText-main, $colorText:$color_text-base, $padUp:0, $padSide:0){
+	padding: $padUp $padSide;
+	color: $colorText;
+	font-size: $fontSize;
+}
+
+
+@-webkit-keyframes loadCircle{
+	0% { width:$logo--nav; height: $logo--nav;}
+	25% {width:$logo--nav + 10px; height: $logo--nav + 10px;}
+	50% {width:$logo--nav + 5px; height: $logo--nav + 5px;}
+	75% {width:$logo--nav + 20px; height: $logo--nav + 20px;}
+	100% {width:$logo--nav; height: $logo--nav;}
+}
+
+
+.btnStnd{ 
+	margin: $stndPadding/2 $stndPadding/2;
+	padding: $stndPadding/2 $stndPadding;
+	border: 0;
+}
+
+.container {
+	width: 60%;
+	overflow: hidden;
+	margin: 0 auto 30px auto;
+	display: block;
+}
+
+.onlyMobile{
+	display: none;
+}
+
+.logoG {
+	width: $logo--nav;
+	height: $logo--nav - 1px;
+	float: left;
+}
+
+.o-wrapper__divBig{
+	width: $width_parzialBig;
+	color: $color_brand--main;
+	margin: 20px 0;
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+
+.o-wrapper__divSmall{
+	width: ($width_parzialSmall+5%);
+	color: $color_brand--main;
+	margin: 20px 0;
+	float: right;
+	display: inline;
+}
+
+@mixin program_Box_sizing {
+	background-image: none;
+	width: 100%;
+	display: inline-block;
+		&:hover{
+		transform: none;
+		}
+}
+
+@mixin program_Box_Main{
+	width:48%;
+	height: auto;
+	background-size:cover;
+	transition: all 0.3s;
+	float: left;
+		&:hover{
+		transform: scale(1.1);
+		}
+}
+
+@mixin program_Box_Main_2 {
+	width:31%;
+	height: auto;
+	background-size:cover;
+	transition: all 0.3s;
+	float: left;
+		&:hover{
+		transform: scale(1.1);
+		}
+}

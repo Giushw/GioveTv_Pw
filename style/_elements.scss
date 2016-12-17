@@ -1,0 +1,23 @@
+/* =======================
+
+Definizione degli elementi 
+base HTML (a, h, img ...)
+
+=========================== */
+
+a {
+	text-decoration: none;
+	color: $color_brand--main;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+input[type=checkbox]{
+	width: 24px;
+	height: 24px;
+	position: relative;
+	top: 6px;
+}

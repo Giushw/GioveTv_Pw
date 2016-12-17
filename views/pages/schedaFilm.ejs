@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include partials/head %>
+		<title>Guida TV | Giove TV</title>
+	</head>
+	<body>
+		<% include partials/popUp %>
+
+		<!-- HEADER | con barra di NAVigazione-->
+		<% include partials/header %>
+		
+		<section class="o-wrapper">
+			<h2 class="o-wrapper__suggest__txt"><%= tittlePass %></h2>
+			<section class="showContainer">
+				<section class ="o-wrapper__divBig">
+					
+					<img src="<%= img%>" />
+					
+				</section>
+				<section class="o-wrapper__product">
+					<a href="/guidatv">
+					<h2 class="product__info">GIOVEDì<br/>21:00</h2>
+					</a>	
+				</section>
+			</section>
+			<section class="o-wrapper__overview">
+				<p class="o-wrapper__overview__txt"><% if (dataPass.overview==null){ %> <%= 'Descrizione non disponibile' %> <%} else { %><%= dataPass.overview %><%}%></p>
+
+				<span class="overview__info">REGISTA:</span><span><%= directorPass %></span><br>
+				<span class="overview__info">ATTORI:</span><%= actors %><br>
+				<span class="overview__info">DURATA:</span><span> <% if (dataPass.runtime==null || dataPass.runtime==0){ %> <%= 'Durata non disponibile' %> <%} else { %><%= dataPass.runtime + ' min' %><%}%></span>
+			</section>
+
+		</section>
+
+
+		<!-- FOOTER | con lista collegamenti -->
+		<% include partials/footer %>
+
+		<% include partials/script %>
+
+	</body>
+</html>

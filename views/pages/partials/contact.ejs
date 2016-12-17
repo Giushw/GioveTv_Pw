@@ -1,0 +1,508 @@
+<section class="centerconc">
+<div class="row">
+<div class="col-sm-12 bordered-bottom innerspacer-xs-bottom-20">
+<h2 class="area-heading o-wrapper__suggest__txt">CONTATTACI</h2><br />
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-6 push-fix">
+        <!-- note/errori/conferme -->
+    </div>
+    <div class="col-sm-6  col-sm-pull-6 pull-fix">
+        <div class="form-group form-group-lg">
+            <p class = >
+                <label class="control-label" for="nomeCliente">Nome *</label>
+                <input class="form-control" id="nomeCliente" name="nomeCliente" placeholder="inserisci" tabindex="40" type="text" value="">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-6 push-fix">
+        <!-- note/errori/conferme -->
+    </div>
+    <div class="col-sm-6  col-sm-pull-6 pull-fix">
+        <div class="form-group form-group-lg">
+            <p class = >
+                <label class="control-label" for="cognomeCliente">Cognome *</label>
+                <input class="form-control" id="cognomeCliente" name="cognomeCliente" placeholder="inserisci" tabindex="50" type="text" value="">
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-6 push-fix">
+        <!-- note/errori/conferme -->
+    </div>
+    <div class="col-sm-3 col-sm-pull-6 pull-fix">
+        <div class="form-group form-group-lg">
+            <label class="control-label" for="campo-calendar">Data di nascita *</label>
+            <div class="input-group date">
+                <input class="form-control" id="dataNascita" name="dataNascita" placeholder="gg/mm/aaaa" type="text" value="">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-6 push-fix">
+        <!-- note/errori/conferme -->
+    </div>
+    <div class="col-sm-3 col-sm-pull-6 pull-fix">
+        <div class="form-group form-group-lg">
+            <p>
+                <label class="control-label" for="campo-comune-nascita">Comune di nascita *</label>
+                <input class="form-control" id="comuneNascita" name="comuneNascita" placeholder="inserisci" type="text" value="">
+            </p>
+        </div>
+    </div>
+    <div class="col-sm-3 col-sm-pull-6 pull-fix">
+        <!-- autocomplete -->
+
+
+
+        <script src="/demo/data/base-data.js" type="text/javascript"></script>
+        <!-- chiamata func -->
+        <script>
+            $('#provinciaNascita').typeahead({
+                hint: false, //suggerisci caratteri mancanti
+                highlight: true, //evidenza i caratteri digitati
+                minLength: 1, //avvia la ricerca dopo x caratteri digitati
+            }, {
+                name: 'mydataset',
+                source: substringMatcher(exampledataset), //chiamata alla base dati di ESEMPIO!!
+                limit: 5 //limita i risultati
+            });
+        </script>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6 col-sm-push-6 push-fix">
+        <!-- note/errori/conferme -->
+    </div>
+
+    <div class="col-sm-6  col-sm-pull-6 pull-fix">
+        <div class="form-group form-group-lg">
+            <p>
+                <label class="control-label" for="campo-cf">Codice fiscale</label>
+                <input class="form-control" id="campo-cf" name="campo-cf" placeholder="inserisci" type="text" value="">
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- sub-Start Recapiti -->
+<!--
+<div class="row">
+    <div class="col-sm-12">
+        <div class="spacer-xs-top-20 spacer-sm-top-10 innerspacer-xs-bottom-20">
+            <a class="expandable no-anchor" href="#" data-toggle="collapse" data-target="#collapseExtra" aria-expanded="false" aria-controls="collapseExtra">Compila i dati facoltativi</a>
+            <div class="collapse nojs-block" id="collapseExtra">
+                <div class="spacer-xs-top-20 spacer-xs-bottom-0">
+                    <h3 class="area-heading">Recapito</h3>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box-editable-area">
+                                <p class="note">I campi sottostanti sono riferiti alla tua residenza</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 push-fix">
+
+                        </div>
+                        <div class="col-sm-4 col-sm-pull-6 pull-fix">
+                            <div class="form-group form-group-lg">
+                                <p>
+                                    <label class="control-label" for="indirizzoResidenza">Indirizzo</label>
+                                    <input type="text" class="form-control" id="indirizzoResidenza" name="indirizzoResidenza" placeholder="inserisci" value="">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-sm-pull-6 pull-fix">
+                            <div class="form-group form-group-lg">
+                                <p>
+                                    <label class="control-label" for="civicoResidenza">n.civ.</label>
+                                    <input type="text" class="form-control" id="civicoResidenza" name="civicoResidenza" placeholder="inserisci" value="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 push-fix">
+
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-6 pull-fix">
+                            <div class="form-group form-group-lg">
+                                <p>
+                                    <label class="control-label" for="comuneResidenza">Comune</label>
+                                    <input type="text" class="form-control" id="comuneResidenza" name="comuneResidenza" placeholder="inserisci" value="">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-6 pull-fix">
+
+
+                            <div class="form-group form-group-lg scrollable-dropdown-menu">
+                                <label class="control-label" for="provinciaResidenza">Provincia</label>
+                                <input class="form-control" name="provinciaResidenza" id="provinciaResidenza" placeholder="inserisci" type="text" value="">
+                            </div>
+
+                            <script type="text/javascript" src="/demo/data/base-data.js"></script>
+
+                            <script>
+                                $('#provinciaResidenza').typeahead({
+                                    hint: false, //suggerisci caratteri mancanti
+                                    highlight: true, //evidenza i caratteri digitati
+                                    minLength: 1, //avvia la ricerca dopo x caratteri digitati
+                                }, {
+                                    name: 'mydataset',
+                                    source: substringMatcher(exampledataset), //chiamata alla base dati di ESEMPIO!!
+                                    limit: 5 //limita i risultati
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-6 push-fix">
+
+                        </div>
+                        <div class="col-sm-4 col-sm-pull-6 pull-fix">
+
+
+                            <div class="form-group form-group-lg scrollable-dropdown-menu">
+                                <label class="control-label" for="nazioneResidenza">Nazione</label>
+                                <input class="form-control" name="nazioneResidenza" id="nazioneResidenza" placeholder="inserisci" type="text" value="">
+                            </div>
+
+                            <script type="text/javascript" src="/demo/data/base-data.js"></script>
+
+                            <script>
+                                $('#nazioneResidenza').typeahead({
+                                    hint: false, //suggerisci caratteri mancanti
+                                    highlight: true, //evidenza i caratteri digitati
+                                    minLength: 1, //avvia la ricerca dopo x caratteri digitati
+                                }, {
+                                    name: 'mydataset',
+                                    source: substringMatcher(exampledataset3), //chiamata alla base dati di ESEMPIO!!
+                                    limit: 5 //limita i risultati
+                                });
+                            </script>
+                        </div>
+                        <div class="col-sm-2 col-sm-pull-6 pull-fix">
+                            <div class="form-group form-group-lg">
+                                <p>
+                                    <label class="control-label" for="capResidenza">Cap</label>
+                                    <input type="text" class="form-control" id="capResidenza" name="capResidenza" placeholder="inserisci" value="">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!-- sub-End Recapiti -->
+</div>
+</div>
+<!-- End Dati Anagrafici -->
+
+
+<!-- Start Richiesta -->
+<div class="row">
+    <div class="col-sm-12 bordered-bottom innerspacer-xs-bottom-20">
+
+        <h3 class="area-heading">Richiesta</h3><br/>
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-6 push-fix">
+                <div class="table-like table-like-note">
+                    <div class="tablerow-like">
+                        <p class="tablecell-like vam">
+                            Scegli <strong>il prodotto o il servizio </strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6  col-sm-pull-6 pull-fix">
+                <div class="form-group form-group-lg">
+                    <p class = >
+                    <label class="control-label" for="prodottoID">Oggetto *</label>
+                    <select class="form-control" id="prodottoID" name="prodottoID">
+                        <!--<option value="-1">Seleziona</option>
+                        <option value="1">Prodotti Corrispondenza</option>
+                        <option value="2">Prodotti Corriere Espresso e Pacchi</option>
+                        <option value="3">Prodotti BancoPosta</option>
+                        <option value="4">Servizi Internet</option>
+                        <option value="5">Ufficio Postale/Contact Center</option>
+                        <option value="6">Altri servizi e iniziative di Poste Italiane</option>-->
+                        <option value="-1">-- seleziona --</option>
+                        <option value="1">
+                            Assistenza Tecnica
+                        </option><option value="2">
+                            Assistenza Commerciale
+                        </option><option value="3">
+                            Richiesta di contatto
+                        </option><option value="4">
+                            Assistenza Internet
+                        </option><option value="5">
+                            Tecnico installatore
+                        </option><option value="6">
+                            Contact Center
+                        </option><option value="7">
+                            Altri Servizi e Iniziative
+                        </option>
+                    </select>
+                        <script language="javascript" type="text/javascript">
+                            //<![CDATA[
+                            if (true) {
+                                for (var i = 0; i < document.inserimentoRichiestaForm.prodottoID.length; i++) {
+                                    if (document.inserimentoRichiestaForm.prodottoID.options[i].value == -1) {
+                                        document.inserimentoRichiestaForm.prodottoID.options[i].selected = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            //]]>
+                        </script>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-push-6 push-fix">
+                <!--<div class="table-like table-like-note">
+                    <div class="tablerow-like">
+                        <p class="tablecell-like vam">
+                            Puoi comunicarci quo offendit ad appellat. Nam nam <strong>velit culpa cillum</strong> te anim in do malis nescius o si illum quorum non quibusdam..
+                        </p>
+                    </div>
+                </div>-->
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group form-group-lg">
+                    <p>
+                        <label class="control-label" for="campo-textarea4">
+                            La tua richiesta *
+                        </label>
+                        <textarea class="form-control" id="testoRichiesta" maxlength="500" name="testoRichiesta" rows="40" cols="50" style="height: 202px;">
+                        </textarea>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-8 col-md-6 col-md-push-6 push-fix">
+                <div class="table-like table-like-note">
+                    <div class="tablerow-like">
+                        <p class="tablecell-like vam">
+                            Puoi allegare un documento alla richiesta <br/>(formati supportati: rtf, pdf, doc, jpg, bmp, gif).
+                            <br/>Ricordati che la dimensione massima del file &egrave; di 2MB.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-pull-4 col-md-6 col-md-pull-6 pull-fix">
+                <div class="form-inline">
+                    <label class="control-label block" for="campo-fileinline">Vuoi allegare un documento?</label><br/>
+
+
+                    <div id="file" style="display: block">
+                    <div class="form-group form-group-lg">
+                        <p class="inputfile">
+                            <label class="sr-only" for="campo-fileinline">Carica il file</label>
+                            <input accept="rtf,pdf,doc,jpg,bmp,gif" id="fileAllegatoID" name="allegato" type="file" value="">
+                        </p>
+                    </div>
+                        <button class="btn btn-primary" onclick="showMsg()" type="button">Allega il file</button>
+                    </div>
+
+                    <div id="msg" onclick="showFile()" style="display: none">
+                    <div class="form-group form-group-lg">
+                        <p class="inputfile">
+                            <label class="sr-only" for="campo-fileinline">File Selezionato</label>
+                        </p>
+                    </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- End Richiesta -->
+
+<!-- Start Modalita' di risposta -->
+<div class="row">
+    <div class="col-sm-12 bordered-bottom innerspacer-xs-bottom-20">
+        <div class="collapse nojs-block" id="contact-email">
+            <div class="row" id="contact-email">
+                <div class="col-sm-6 col-sm-push-6 push-fix">
+                    <!--
+                    <div class="table-like table-like-note">
+                        <div class="tablerow-like">
+                            <p class="tablecell-like vam">
+                                Inserisci un indirizzo e-mail <strong>per ricevere la risposta nella casella di posta elettronica</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="col-sm-6  col-sm-pull-6 pull-fix">
+                    <div class="form-group form-group-lg">
+                        <p class = >
+                            <label class="control-label" for="postaElettronica">Indirizzo e-mail</label>
+                            <input class="form-control" id="postaElettronica" name="postaElettronica" placeholder="inserisci" tabindex="60" type="text" value="">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            $('#contactEmail').on('click', function () {
+                if ($(this).parent().hasClass("selected")) {
+                    $('#postaElettronica').val('');
+                }
+            });
+
+
+            if ($('#postaElettronica').val() != '') {
+                $('#contactEmail').attr('checked', true);
+                $('#contact-email').addClass('in');
+            } else {
+                $('#contactEmail').attr('checked', false);
+                $('#contact-email').removeClass('in');
+            }
+        </script>
+
+
+        <div class="collapse nojs-block" id="contact-tel">
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6 push-fix">
+                    <!--
+                    <div class="table-like table-like-note">
+                        <div class="tablerow-like">
+                            <p class="tablecell-like vam">
+                                Inserisci un numero <strong>per ricevere contatto telefonico</strong>.
+                            </p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="col-sm-6  col-sm-pull-6 pull-fix">
+                    <div class="form-group form-group-lg">
+                        <p class = >
+                        <label class="control-label" for="numeroTelefono">
+                            Numero di cellulare
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon input-group-addon-evidence">+39</div>
+                            <input class="form-control" id="numeroTelefono" name="numeroTelefono" placeholder="inserisci" tabindex="70" type="text" value="">
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+
+            $('#contactTel').on('click', function () {
+                if ($(this).parent().hasClass("selected")) {
+                    $('#numeroTelefono').val('');
+                }
+            });
+
+
+            if ($('#numeroTelefono').val() != '') {
+                $('#contactTel').attr('checked', true);
+                $('#contact-tel').addClass('in');
+            } else {
+                $('#contactTel').attr('checked', false);
+                $('#contact-tel').removeClass('in');
+            }
+        </script>
+
+    </div>
+</div>
+<!-- End Modalita' di risposta -->
+
+
+
+<div class="row">
+    <div class="col-sm-12 bordered-bottom innerspacer-xs-bottom-20">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="area-heading">Informativa sull'uso dei dati personali</h3>
+            </div>
+            <div class="col-md-12">
+                <ul class="inside-ls list-unstyled">
+                    <li>
+                        <!--
+                        <div class="box-scroll">
+                            <div class="box-body">
+                                <p class="note">Informativa ex art. 13 del d.lgs. n. 196/2003 (Codice in materia di protezione dei dati personali) - Poste Italiane S.p.A. desidera fornirLe le seguenti informazioni riguardanti l'utilizzo dei Suoi dati personali. Fonte dei dati personali: i dati personali sono raccolti direttamente presso l'interessato. Finalit&agrave; del trattamento: i dati personali saranno trattati per le seguenti finalit&agrave;: gestione delle informazioni richieste sui prodotti del Gruppo. Il conferimento dei dati, sebbene facoltativo, &egrave; necessario per la comunicazione delle informazioni richieste. Il mancato conferimento degli stessi non consentir&agrave; di fornire all'interessato l'assistenza richiesta. Modalit&agrave; di trattamento dei dati: il trattamento dei dati personali avverr&agrave; mediante strumenti manuali, informatici e telematici con logiche strettamente correlate alle finalit&agrave; stesse e, comunque, in modo da garantire la sicurezza e la riservatezza degli stessi. Categorie di soggetti ai quali i dati possono essere comunicati o che possono venire a conoscenza in qualit&agrave; di responsabili o incaricati: I dati personali potranno essere comunicati a dipendenti e collaboratori di Poste Italiane S.p.A. specificamente incaricati del trattamento, ed alle aziende del gruppo Poste Italiane S.p.A., che li tratteranno, a loro volta, in qualit&agrave; di Titolari autonomi, per il tempo strettamente necessario all'esecuzione del servizio richiesto. Titolare ed esercizio dei diritti ex art. 7 Codice in materia di protezione dei dati personali: Il Titolare del trattamento &egrave; Poste Italiane S.p.A., con sede in Roma, Viale Europa, 190 presso il quale &egrave; possibile in qualsiasi momento esercitare i diritti riconosciuti dall'art. 7 del Codice in materia di protezione dei dati personali e, in particolare, tra gli altri, di ottenere copia dei dati trattati, il loro aggiornamento, la loro rettifica o integrazione, la loro cancellazione, la trasformazione in forma anonima o il blocco per i trattamenti in violazione di legge.</p>
+                                                    <br/>
+                                                </div>
+                                                <div class="overflow-img"></div>
+                                            </div>
+                                            -->
+                        <div class="form-group form-group-lg">
+                            <p>
+                                <label class="control-label" for="campo-cgs">
+                                    Nota informativa
+                                </label>
+                                <textarea class="form-control" id="campo-cgs" readonly="readonly" rows="6" style="font-size:12px;resize:none;font-size:12px;resize:none;height: 152px;">Informativa ex art. 13 del d.lgs. n. 196/2003 (Codice in materia di protezione dei dati personali) - Poste Italiane S.p.A. desidera fornirLe le seguenti informazioni riguardanti l'utilizzo dei Suoi dati personali. Fonte dei dati personali: i dati personali sono raccolti direttamente presso l'interessato. Finalit&agrave; del trattamento: i dati personali saranno trattati per le seguenti finalit&agrave;: gestione delle informazioni richieste sui prodotti del Gruppo. Il conferimento dei dati, sebbene facoltativo, &egrave; necessario per la comunicazione delle informazioni richieste. Il mancato conferimento degli stessi non consentir&agrave; di fornire all'interessato l'assistenza richiesta. Modalit&agrave; di trattamento dei dati: il trattamento dei dati personali avverr&agrave; mediante strumenti manuali, informatici e telematici con logiche strettamente correlate alle finalit&agrave; stesse e, comunque, in modo da garantire la sicurezza e la riservatezza degli stessi. Categorie di soggetti ai quali i dati possono essere comunicati o che possono venire a conoscenza in qualit&agrave; di responsabili o incaricati: I dati personali potranno essere comunicati a dipendenti e collaboratori di Poste Italiane S.p.A. specificamente incaricati del trattamento, ed alle aziende del gruppo Poste Italiane S.p.A., che li tratteranno, a loro volta, in qualit&agrave; di Titolari autonomi, per il tempo strettamente necessario all'esecuzione del servizio richiesto. Titolare ed esercizio dei diritti ex art. 7 Codice in materia di protezione dei dati personali: Il Titolare del trattamento &egrave; Poste Italiane S.p.A., con sede in Roma, Viale Europa, 190 presso il quale &egrave; possibile in qualsiasi momento esercitare i diritti riconosciuti dall'art. 7 del Codice in materia di protezione dei dati personali e, in particolare, tra gli altri, di ottenere copia dei dati trattati, il loro aggiornamento, la loro rettifica o integrazione, la loro cancellazione, la trasformazione in forma anonima o il blocco per i trattamenti in violazione di legge.</textarea>
+
+                            </p>
+                        </div>
+                        <p class = >
+                        <div class="radio box-advice box-evidence text-xs-center text-sm-left spacer-xs-top-20" style="text-align: center;">
+                            <label class="radio-inline control-label" for="optionsRadios1" id="contatto" value="o1">
+                                <input checked id="optionsRadios1" name="optionsRadios" type="radio" value="option1">Presto il consenso</label>
+                            <label class="radio-inline control-label" for="optionsRadios2" id="contatto" value="o2">
+                                <input id="optionsRadios2" name="optionsRadios" type="radio" value="option2">Nego il consenso
+                            </label>
+                        </div>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="box-editable-area">
+            <p class="note spacer-xs-top-30">I campi contrassegnati da * sono obbligatori.</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <p class="spacer-xs-top-10 spacer-sm-top-0 spacer-xs-bottom-30 btn-container-right clearfix" style="text-align: center;">
+			<input class="btn btn-primary" type="submit" value="Invia">
+			<input class="btn btn-default" onClick="cancel()" type="submit" value="Annulla">
+			<input name="operazione" type="hidden" value="submit"/>
+        </p>
+    </div>
+</div>
+</section>

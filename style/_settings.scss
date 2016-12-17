@@ -1,0 +1,68 @@
+/* ========================== 
+
+Definizione delle variabili 
+
+============================= */
+
+
+$stZIndex: 900;
+
+
+/* ======== COLORI ========= */
+
+
+$colortest-light: #fdf49c;
+$colortest-dark: #004080;
+
+/* colore brand Identity 
+- testi principali
+- colore bordi 
+*/
+$color_brand--main: #15424f;
+
+/* colore 
+- sfondi header/footer
+- testo link secondari */
+$color_brand--second: #4c8ea1;
+
+
+$color_text-base: #fff;
+$color_text-choc: #21d0ff;
+$color_text-soft: #87c3d4;
+$color_text-dark: #336f81;
+$color_text-light: #c1e7f2;
+$color_brand-grey: #f7f7f7;
+
+
+/* ======== FONT ========== */
+
+@font-face{
+	font-family: Montserrat;
+	src: url('../font/Montserrat/Montserrat-Regular.ttf');	
+}
+
+
+$font_brand-main: Montserrat, Arial, sans-serif;
+
+
+//$font_brand-p: 
+
+$sizeText-main: 2.5em;
+
+// ======== STANDARD SIZE ========== 
+
+$width_main: 80%;
+$width_parzialBig: 62.5%;
+$width_parzialSmall: 30%;
+$margin_main: (100% - $width_main)/2;
+
+$formatHeight: 80px;
+
+$stndPadding: 1.875em; // 30px 
+
+
+// ========= LOGO =========
+$logo--nav: ($formatHeight + 1.5px);
+
+
+

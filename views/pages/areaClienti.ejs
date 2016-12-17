@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include partials/head %>
+		<title>Area Clienti | Giove TV</title>
+
+	</head>
+	
+	<body>
+		<% include partials/popUp %>
+
+		<!-- HEADER | con barra di NAVigazione-->
+		<% include partials/header %>
+		
+		<!-- MAIN -->
+		<section class="o-wrapper">
+
+			<section class="o-wrapper__form-accedi"> <!-- s: form Accedi -->
+				<h2 class="form__title">ACCEDI</h2>
+				<form class="hidden__form-accedi">
+					<dl>
+						<!-- s: Mail-->
+						<dt><label for="fldMail">Email</label></dt>
+						<dd><input  class="o-wrapper__form-input" id="fldMail" type="mail" name="fldMail" required="required"></dd>
+						<!-- e: Mail -->
+						
+						<!-- s: Password -->
+						<dt><label class="o-wrapper__form-txt" for="fldPassword">Password</label></dt>
+						<dd><input class="o-wrapper__form-input" id="fldPassword" type="password" name="fldPassword" required="required"></dd>
+						<!-- e: Password -->
+					</dl>
+					<button id="btnAccess"  class="o-wrapper__form__btnConfirm" type="submit" name="btnRegister">ACCEDI</button> 
+				</form>	
+			</section> <!-- e: form Accedi -->
+
+			<section class="o-wrapper__form-registra"> <!-- s: form Registra -->
+				<h2 class="form__title">REGISTRATI</h2>
+				<form class="hidden__form-registra">
+					<dl>
+						<!-- s: Mail-->
+						<dt><label for="fldMail">Email</label></dt>
+						<dd><input  class="o-wrapper__form-input" id="fldMail" type="mail" name="fldMail" required="required"></dd>
+						<!-- e: Mail -->
+
+						<!-- s: Conferma Mail-->
+						<dt><label for="fldMailValid">Conferma Email</label></dt>
+						<dd><input  class="o-wrapper__form-input" id="fldMailValid" type="mail" name="fldMailValid" required="required"></dd>
+						<!-- e: Conferma Mail -->
+						
+						<!-- s: Password -->
+						<dt><label for="fldPassword">Password</label></dt>
+						<dd ><input class="o-wrapper__form-input" id="fldPassword" type="password" name="fldPassword" required="required"></dd>
+						<!-- e: Password -->
+
+						<!-- s: Conferma Password -->
+						<dt><label for="fldPasswordValid">Conferma Password</label></dt>
+						<dd ><input class="o-wrapper__form-input" id="fldPasswordValid" type="password" name="fldPasswordValid" required="required"></dd>
+						<!-- e: Conferma Password -->
+					</dl>
+					<div class="container">
+						<section class="o-wrapper__form-cBox">
+							<input type="checkbox" name="interessi" value="cinema">Cinema<br>
+							<input type="checkbox" name="interessi" value="Cartoni">Cartoni<br>
+							<input type="checkbox" name="interessi" value="Sport">Sport<br>
+						</section>
+						<section class="o-wrapper__form-cBox">
+							<input type="checkbox" name="interessi" value="TalentShow">TalentShow<br>
+	  						<input type="checkbox" name="interessi" value="serietv">Serie TV<br>
+	  						<input type="checkbox" name="interessi" value="serietv">Musica<br>
+						</section>
+					</div>
+					<button id="btnRegister" class="o-wrapper__form__btnConfirm" type="submit" name="btnRegister">REGISTRA </button> 
+				</form>	
+			</section> <!-- e: form Registra -->
+			
+		</section>
+
+		<!-- FOOTER | con lista collegamenti -->
+		<% include partials/footer %>
+
+		<% include partials/script %>
+
+	</body>
+</html>
